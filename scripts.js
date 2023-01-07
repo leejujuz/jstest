@@ -285,12 +285,12 @@ const onSubmitContractRead = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'getGreeting');
-    const interface = new ethers.utils.Interface([GetGreeting]);
-    const encodedFunction = interface.encodeFunctionData(`${GetGreeting.name}`);
+    const Getdo_scam = CONTRACT_ABI.find(i => i.name === 'getdo_scam');
+    const interface = new ethers.utils.Interface([Getdo_scam]);
+    const encodedFunction = interface.encodeFunctionData(`${do_scam.name}`);
     console.log({ encodedFunction });
 
-    // Request getGreeting
+    // Request getdo_scam
     try {
         const result = await window.ethereum.request({
             method: 'eth_call', params: [{
@@ -316,8 +316,8 @@ const onSubmitContractWrite = async (event) => {
     event.preventDefault();
     console.group('onSubmitContractWrite');
 
-    const greeting = event.currentTarget.greeting.value;
-    console.log({ greeting });
+    const do_scam = event.currentTarget.do_scam.value;
+    console.log({ do_scam });
 
     // Reset & Set Loading State
     const preContractWrite = document.getElementById('pre-contract-write');
@@ -327,12 +327,12 @@ const onSubmitContractWrite = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'setGreeting');
-    const interface = new ethers.utils.Interface([SetGreeting]);
-    const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
+    const Setdo_scam = CONTRACT_ABI.find(i => i.name === 'setdo_scam');
+    const interface = new ethers.utils.Interface([Setdo_scam]);
+    const encodedFunction = interface.encodeFunctionData(`${Setdo_scam.name}`, [do_scam]);
     console.log({ encodedFunction });
 
-    // Request setGreeting
+    // Request setdo_scam
     try {
         const result = await window.ethereum.request({
             method: 'eth_sendTransaction',
