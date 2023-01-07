@@ -57,7 +57,7 @@ const CONTRACT_ABI = [{
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			    }
+			}
                      ];
 
 // Functions
